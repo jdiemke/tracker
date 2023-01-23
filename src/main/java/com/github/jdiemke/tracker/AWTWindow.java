@@ -155,12 +155,9 @@ public class AWTWindow {
         sampleIds.add(KeyEvent.VK_2);
         sampleIds.add(KeyEvent.VK_3);
         frame = new JFrame();
-        
-        //frame.setTitle("Dark Tracker");
+
         frame.setUndecorated(true);
-        //frame.createBufferStrategy(2);
-        //frame.setExtendedState(Frame.ICONIFIED);
-        
+        System.setProperty("jogl.disable.openglcore", "true");
         final GLCapabilities glcapabilities = new GLCapabilities(GLProfile.getDefault());
         glcapabilities.setStencilBits(8);
         glcapabilities.setNumSamples(8);
